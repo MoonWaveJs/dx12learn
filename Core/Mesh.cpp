@@ -1,0 +1,54 @@
+#include "Mesh.h"
+
+#include <DirectXColors.h>
+
+UINT Dx12RenderLearn::Mesh::GetVertexNum()
+{
+    // load from meta file info
+    return 8;
+}
+
+UINT Dx12RenderLearn::Mesh::GetIndicesNum()
+{
+    return 36;
+}
+
+void Dx12RenderLearn::Mesh::LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer)
+{
+    vertexBufferOffset = pVertexBuffer->size();
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::White)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Black)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Red)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::Green)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Blue)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, +1.0f, +1.0f), XMFLOAT4(Colors::Yellow)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, +1.0f), XMFLOAT4(Colors::Cyan)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Magenta)));
+}
+
+void Dx12RenderLearn::Mesh::LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer)
+{
+    indicesBufferOffset = pIndexBuffer->size();
+    UINT indices[] =
+    {
+        // 立方体前表面
+        0, 1, 2,
+        0, 2, 3,
+        // 立方体后表面
+        4, 6, 5,
+        4, 7, 6,
+        // 立方体左表面
+        4, 5, 1,
+        4, 1, 0,
+        // 立方体右表面
+        3, 2, 6,
+        3, 6, 7,
+        // 立方体上表面
+        1, 5, 6,
+        1, 6, 2,
+        // 立方体下表面
+        4, 0, 3,
+        4, 3, 7
+    };
+    pIndexBuffer->insert(pIndexBuffer->end(), std::begin(indices), std::end(indices));
+}
