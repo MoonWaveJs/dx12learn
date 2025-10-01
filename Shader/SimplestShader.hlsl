@@ -1,10 +1,5 @@
 
-cbuffer cGlogalObjectBuffer : register(b0)
-{
-    float4x4 gViewProj;
-}
-
-cbuffer cbPerObjectBuffer : register(b1)
+cbuffer cbPerObjectBuffer : register(b0)
 {
     float4x4 WorldViewProj;
 }

@@ -38,7 +38,6 @@ namespace Dx12RenderLearn
         shared_ptr<D3D12_INDEX_BUFFER_VIEW> staticIndexBufferView;
         shared_ptr<D3D12_VERTEX_BUFFER_VIEW> staticVertexBufferView;
         // GlobalParamBuffer
-		ComPtr<ID3D12DescriptorHeap> globalParamBufferHeap;
         ComPtr<ID3D12Resource> uploadGlobalConstantBuffer;
 		// perObject buffer
         ComPtr<ID3D12DescriptorHeap> objectParamBufferHeap;

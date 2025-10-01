@@ -68,7 +68,7 @@ void Dx12RenderLearn::D3dAppIns::Draw()
     D3D12_CPU_DESCRIPTOR_HANDLE CurrentDSvHandle = GetCurrentDSvHandle();
     pCommandList->OMSetRenderTargets(1,&CurrentRtvHandle,true,&CurrentDSvHandle);
 
-    pipline->RenderStaticScene();
+    //pipline->RenderStaticScene();
 
     CD3DX12_RESOURCE_BARRIER Barrier = CD3DX12_RESOURCE_BARRIER::Transition(GetCurrentBackBuffer(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
     pCommandList->ResourceBarrier(1, &Barrier);
@@ -113,12 +113,13 @@ void Dx12RenderLearn::D3dAppIns::FlushCommandQueue()
     {
         m_FenceEventHandle = CreateEvent(nullptr, false, false, nullptr);
         assert(m_FenceEventHandle != NULL);
-        std::lock_guard<std::mutex> LockGuard(m_EventMutex);
+        //std::lock_guard<std::mutex> LockGuard(m_EventMutex);
         hardwareResult = pFence1->SetEventOnCompletion(mCurrentFence, m_FenceEventHandle);
         ThrowIfFailed(hardwareResult);
         WaitForSingleObject(m_FenceEventHandle, INFINITE);
-        //ResetEvent(m_FenceEventHandle);
-        //CloseHandle(m_FenceEventHandle);
+
+        ResetEvent(m_FenceEventHandle);
+        CloseHandle(m_FenceEventHandle);
     }
 }
 

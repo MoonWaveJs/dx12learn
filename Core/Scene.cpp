@@ -35,20 +35,6 @@ Dx12RenderLearn::Scene::Scene(const string& path, std::shared_ptr<RenderContext>
 {
 	renderContext = conext;
 
-	// global param buffer
-    D3D12_DESCRIPTOR_HEAP_DESC gloalParamBufferHeapDesc;
-    gloalParamBufferHeapDesc.NumDescriptors = 1;
-    gloalParamBufferHeapDesc.NodeMask = 0;
-    gloalParamBufferHeapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
-	gloalParamBufferHeapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
-	renderContext->pDevice->CreateDescriptorHeap(&gloalParamBufferHeapDesc, IID_PPV_ARGS(&globalParamBufferHeap));
-
-	BufferHelper::CreateConstantBuffer(renderContext->pDevice, sizeof(GlobalParamBuffer), uploadGlobalConstantBuffer);
-	D3D12_CONSTANT_BUFFER_VIEW_DESC globalParamBufferViewDesc;
-	globalParamBufferViewDesc.BufferLocation = uploadGlobalConstantBuffer->GetGPUVirtualAddress();
-	globalParamBufferViewDesc.SizeInBytes = (sizeof(GlobalParamBuffer) + 255) & ~255;
-    renderContext->pDevice->CreateConstantBufferView(&globalParamBufferViewDesc, globalParamBufferHeap->GetCPUDescriptorHandleForHeapStart());
-
     /// collect render item
     UINT staticMeshVertexNum = 0;
     UINT staticMeshIndicesNum = 0;

@@ -16,14 +16,14 @@ UINT Dx12RenderLearn::Mesh::GetIndicesNum()
 void Dx12RenderLearn::Mesh::LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer)
 {
     vertexBufferOffset = pVertexBuffer->size();
-    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::White)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::Red)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Black)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Red)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::Green)));
-    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Blue)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Red)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, +1.0f, +1.0f), XMFLOAT4(Colors::Yellow)));
-    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, +1.0f), XMFLOAT4(Colors::Cyan)));
-    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Magenta)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, +1.0f), XMFLOAT4(Colors::Red)));
+    pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, -1.0f, +1.0f), XMFLOAT4(Colors::Red)));
 }
 
 void Dx12RenderLearn::Mesh::LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer)
