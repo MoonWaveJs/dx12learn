@@ -1,0 +1,1199 @@
+[
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/VaseSmall.FBX",
+    "Name": "VaseSmall",
+    "Position": {
+      "x": 0.747,
+      "y": 0.802,
+      "z": -3.994
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714931,
+      "z": 0.340714931
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Mug.FBX",
+    "Name": "Mug (1)",
+    "Position": {
+      "x": 0.169,
+      "y": 0.815,
+      "z": -3.75273824
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Mug.FBX",
+    "Name": "Mug",
+    "Position": {
+      "x": -1.98143244,
+      "y": 0.36,
+      "z": -0.760668039
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantSnakeLarge.FBX",
+    "Name": "PlantSnakeLarge",
+    "Position": {
+      "x": -1.964277,
+      "y": 0.13287884,
+      "z": 0.2900363
+    },
+    "Scale": {
+      "x": 0.2578515,
+      "y": 0.257851452,
+      "z": 0.2578515
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 67.67769,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantPotMedium.FBX",
+    "Name": "PlantPotMedium (1)",
+    "Position": {
+      "x": -1.96869445,
+      "y": 0,
+      "z": 0.304932
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantSnakeLarge.FBX",
+    "Name": "PlantSnakeLarge",
+    "Position": {
+      "x": -1.05761981,
+      "y": 0.29,
+      "z": 0.0971729755
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantPotRoundMedium.FBX",
+    "Name": "PlantPotRoundMedium",
+    "Position": {
+      "x": -1.05761981,
+      "y": 0,
+      "z": 0.0971729755
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantSnakeLarge.FBX",
+    "Name": "PlantSnakeLarge",
+    "Position": {
+      "x": -2.98258257,
+      "y": 0.102878839,
+      "z": -0.000895719044
+    },
+    "Scale": {
+      "x": 0.2578515,
+      "y": 0.257851452,
+      "z": 0.2578515
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 67.67769,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/PlantPotMedium.FBX",
+    "Name": "PlantPotMedium",
+    "Position": {
+      "x": -2.987,
+      "y": -0.03,
+      "z": 0.014
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Books.FBX",
+    "Name": "BookSmall",
+    "Position": {
+      "x": 0.765,
+      "y": 1.0148381,
+      "z": -4.478
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714961,
+      "z": 0.384043962
+    },
+    "Rotation": {
+      "x": 0.000054641514,
+      "y": 0.00244179252,
+      "z": 180
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Books.FBX",
+    "Name": "BookMedium 1",
+    "Position": {
+      "x": 0.7492246,
+      "y": 0.974145353,
+      "z": -4.47799969
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714961,
+      "z": 0.384043962
+    },
+    "Rotation": {
+      "x": 0.000054641514,
+      "y": 0.00244179252,
+      "z": 180
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Books.FBX",
+    "Name": "BookMedium",
+    "Position": {
+      "x": 0.765,
+      "y": 1.053171,
+      "z": -4.478
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714961,
+      "z": 0.384043962
+    },
+    "Rotation": {
+      "x": 0.000054641514,
+      "y": 0.00244179252,
+      "z": 180
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Books.FBX",
+    "Name": "BookLarge",
+    "Position": {
+      "x": 0.765,
+      "y": 0.9261288,
+      "z": -4.478
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714961,
+      "z": 0.384043962
+    },
+    "Rotation": {
+      "x": 0.000054641514,
+      "y": 0.00244179252,
+      "z": 180
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/LightBulb.FBX",
+    "Name": "LightBulb",
+    "Position": {
+      "x": 0.605,
+      "y": 1.198,
+      "z": -3.427497
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": -0.0000323297136,
+      "y": 180,
+      "z": 180
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/LampSmall.FBX",
+    "Name": "LampShadewire",
+    "Position": {
+      "x": 0.6050001,
+      "y": 1.01094806,
+      "z": -3.427497
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714931,
+      "z": 0.340714931
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/LampSmall.FBX",
+    "Name": "LampShadeSmall",
+    "Position": {
+      "x": 0.60499984,
+      "y": 1.15931249,
+      "z": -3.427497
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714931,
+      "z": 0.340714931
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/LampSmall.FBX",
+    "Name": "LampRoundSmall",
+    "Position": {
+      "x": 0.605,
+      "y": 0.83,
+      "z": -3.427497
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340714931,
+      "z": 0.340714931
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/TableRectangleShort.FBX",
+    "Name": "TableRectangleShort",
+    "Position": {
+      "x": -1.74112546,
+      "y": 0.009490068,
+      "z": -0.721356153
+    },
+    "Scale": {
+      "x": 0.340715051,
+      "y": 0.340715,
+      "z": 0.340715051
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/SofaCusion.FBX",
+    "Name": "SofaCusion (1)",
+    "Position": {
+      "x": -2.66699982,
+      "y": 0.689924,
+      "z": -2.28106737
+    },
+    "Scale": {
+      "x": 1.00000048,
+      "y": 1.00000048,
+      "z": 1.00000024
+    },
+    "Rotation": {
+      "x": 340.531982,
+      "y": 25.7972279,
+      "z": 90.79436
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/SofaCusion.FBX",
+    "Name": "SofaCusion",
+    "Position": {
+      "x": -1.08342791,
+      "y": 0.680924,
+      "z": -2.37706566
+    },
+    "Scale": {
+      "x": 1.00000048,
+      "y": 1.00000036,
+      "z": 1.00000036
+    },
+    "Rotation": {
+      "x": 350.650818,
+      "y": 351.5451,
+      "z": 87.6989441
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/SofaDouble.FBX",
+    "Name": "SofaDouble",
+    "Position": {
+      "x": -1.86,
+      "y": -0.00307607651,
+      "z": -2.19
+    },
+    "Scale": {
+      "x": 2.139742,
+      "y": 2.139742,
+      "z": 2.139742
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 179.999939,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/ShelvesMediumA.FBX",
+    "Name": "ShelvesMediumA",
+    "Position": {
+      "x": -6.77,
+      "y": 0.00613948237,
+      "z": -5.44189835
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/ChairDinningB.FBX",
+    "Name": "ChairDinningB",
+    "Position": {
+      "x": -0.402992249,
+      "y": 0.009490073,
+      "z": -3.91948342
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 179.999954,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/TableRectangleMedium.FBX",
+    "Name": "TableRectangleMedium",
+    "Position": {
+      "x": 0.476,
+      "y": 0.009490073,
+      "z": -3.905
+    },
+    "Scale": {
+      "x": 0.340715,
+      "y": 0.340715,
+      "z": 0.340715
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0.0000546415067,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedPillow.FBX",
+    "Name": "BedPillow (1)",
+    "Position": {
+      "x": -3.951001,
+      "y": 0.505611539,
+      "z": -5.625
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1.00000024
+    },
+    "Rotation": {
+      "x": 355,
+      "y": 180.000046,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedPillow.FBX",
+    "Name": "BedPillow",
+    "Position": {
+      "x": -3.250001,
+      "y": 0.505611539,
+      "z": -5.62500048
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1.00000024
+    },
+    "Rotation": {
+      "x": 355,
+      "y": 180.000046,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedDouble.FBX",
+    "Name": "BedDouble",
+    "Position": {
+      "x": -3.65,
+      "y": -0.00238850713,
+      "z": -4.83
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": -2.715581e-21,
+      "y": 180.000046,
+      "z": 3.50835562e-15
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Floor/Floor2m.FBX",
+    "Name": "Floor2m (3)",
+    "Position": {
+      "x": -0.9950322,
+      "y": 2.38418579e-7,
+      "z": -9.536743e-7
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "DoorHandle001",
+    "Position": {
+      "x": 1.01878881,
+      "y": 1.05800974,
+      "z": -2.3239274
+    },
+    "Scale": {
+      "x": -1,
+      "y": -0.99999994,
+      "z": -0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270.000122,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "DoorHandle",
+    "Position": {
+      "x": 0.94057703,
+      "y": 1.05800974,
+      "z": -2.3239274
+    },
+    "Scale": {
+      "x": -1,
+      "y": -0.99999994,
+      "z": -0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270.000122,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "Door",
+    "Position": {
+      "x": 0.9999995,
+      "y": 0,
+      "z": -1.54999983
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 90.00005,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallDoor2m.FBX",
+    "Name": "WallDoor2mSkirting",
+    "Position": {
+      "x": 1,
+      "y": 0,
+      "z": -0.9999998
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.99999994,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90.00005,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallDoor2m.FBX",
+    "Name": "WallDoor2m",
+    "Position": {
+      "x": 1,
+      "y": 0,
+      "z": -0.9999998
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.99999994,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90.00005,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4mCurtain.FBX",
+    "Name": "CurtainPole4m001",
+    "Position": {
+      "x": -4.00000238,
+      "y": 0,
+      "z": -0.08404577
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 89.99997,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4mCurtain.FBX",
+    "Name": "CurtainBay4m",
+    "Position": {
+      "x": -4.00000238,
+      "y": 0,
+      "z": -0.08404577
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "WindowBayGlass4m",
+    "Position": {
+      "x": -4,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "WindowBayFrame4m",
+    "Position": {
+      "x": -4,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "WallWindowBay4mSkirting",
+    "Position": {
+      "x": -4,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "WallWindowBay4mCeling",
+    "Position": {
+      "x": -4,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "WallWindowBay4m",
+    "Position": {
+      "x": -4,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallWindowBay4m.FBX",
+    "Name": "FloorBayWindow",
+    "Position": {
+      "x": -3.5,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Floor/Floor4m.FBX",
+    "Name": "Floor4m (1)",
+    "Position": {
+      "x": -2.99503231,
+      "y": 2.38418579e-7,
+      "z": -2.000001
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Wall3m.FBX",
+    "Name": "Wall3mSkirting",
+    "Position": {
+      "x": 0.9999981,
+      "y": 0,
+      "z": -3
+    },
+    "Scale": {
+      "x": 1.00000012,
+      "y": 1,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Wall3m.FBX",
+    "Name": "Wall3m",
+    "Position": {
+      "x": 0.9999981,
+      "y": 0,
+      "z": -3
+    },
+    "Scale": {
+      "x": 1.00000012,
+      "y": 1,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerOuter.FBX",
+    "Name": "WallCornerOuterSkirting",
+    "Position": {
+      "x": -5.999999,
+      "y": 0,
+      "z": -2.00000048
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerOuter.FBX",
+    "Name": "WallCornerOuter",
+    "Position": {
+      "x": -5.999999,
+      "y": 0,
+      "z": -2.00000048
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Floor/Floor2m.FBX",
+    "Name": "Floor2m (1)",
+    "Position": {
+      "x": -4.99503231,
+      "y": 2.38418579e-7,
+      "z": -9.536743e-7
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInnerSkirting",
+    "Position": {
+      "x": -4.999999,
+      "y": 0,
+      "z": -1.0000006
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 269.999969,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInner",
+    "Position": {
+      "x": -4.999999,
+      "y": 0,
+      "z": -1.0000006
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 269.999969,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Floor/Floor2m.FBX",
+    "Name": "Floor2m",
+    "Position": {
+      "x": -2.99503231,
+      "y": 2.38418579e-7,
+      "z": -9.536743e-7
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "DoorHandle001",
+    "Position": {
+      "x": -7.01878738,
+      "y": 1.05801,
+      "z": -3.67607355
+    },
+    "Scale": {
+      "x": -1.00000012,
+      "y": -1,
+      "z": -0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90.0000458,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "DoorHandle",
+    "Position": {
+      "x": -6.9405756,
+      "y": 1.05801,
+      "z": -3.67607355
+    },
+    "Scale": {
+      "x": -1.00000012,
+      "y": -1,
+      "z": -0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 90.0000458,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Door.FBX",
+    "Name": "Door",
+    "Position": {
+      "x": -6.999997,
+      "y": 2.38418579e-7,
+      "z": -4.450001
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1.00000024
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallDoor2m.FBX",
+    "Name": "WallDoor2mSkirting",
+    "Position": {
+      "x": -6.99999666,
+      "y": 2.38418579e-7,
+      "z": -5.000001
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallDoor2m.FBX",
+    "Name": "WallDoor2m",
+    "Position": {
+      "x": -6.99999666,
+      "y": 2.38418579e-7,
+      "z": -5.000001
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Wall1m.FBX",
+    "Name": "Wall1mSkirting",
+    "Position": {
+      "x": -6.99999666,
+      "y": 2.38418579e-7,
+      "z": -6.000001
+    },
+    "Scale": {
+      "x": 1.00000012,
+      "y": 1,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/Wall1m.FBX",
+    "Name": "Wall1m",
+    "Position": {
+      "x": -6.99999666,
+      "y": 2.38418579e-7,
+      "z": -6.000001
+    },
+    "Scale": {
+      "x": 1.00000012,
+      "y": 1,
+      "z": 0.99999994
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 270,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Floor/Floor4m.FBX",
+    "Name": "Floor4m",
+    "Position": {
+      "x": -6.99503231,
+      "y": 2.38418579e-7,
+      "z": -2.000001
+    },
+    "Scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInnerSkirting",
+    "Position": {
+      "x": -6.99999762,
+      "y": 2.38418579e-7,
+      "z": -3.000001
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 269.999969,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInner",
+    "Position": {
+      "x": -6.99999762,
+      "y": 2.38418579e-7,
+      "z": -3.000001
+    },
+    "Scale": {
+      "x": 1.00000024,
+      "y": 1,
+      "z": 1
+    },
+    "Rotation": {
+      "x": 270,
+      "y": 269.999969,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInnerSkirting",
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Assets/UnityTechnologies/Basic Asset Pack Interior/Models/Walls/WallCornerInner.FBX",
+    "Name": "WallCornerInner",
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Scale": {
+      "x": 1,
+      "y": 0.9999999,
+      "z": 0.9999999
+    },
+    "Rotation": {
+      "x": 270.019775,
+      "y": 0,
+      "z": 0
+    }
+  },
+  {
+    "MeshPath": "Library/unity default resources",
+    "Name": "Plane",
+    "Position": {
+      "x": 2,
+      "y": 3,
+      "z": -2.79548335
+    },
+    "Scale": {
+      "x": 1.84598756,
+      "y": 1,
+      "z": 0.67742
+    },
+    "Rotation": {
+      "x": -0.00003073585,
+      "y": 180,
+      "z": 180
+    }
+  }
+]
