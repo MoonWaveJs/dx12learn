@@ -68,7 +68,7 @@ void Dx12RenderLearn::D3dAppIns::Draw()
     D3D12_CPU_DESCRIPTOR_HANDLE CurrentDSvHandle = GetCurrentDSvHandle();
     pCommandList->OMSetRenderTargets(1,&CurrentRtvHandle,true,&CurrentDSvHandle);
 
-    //pipline->RenderStaticScene();
+    pipline->RenderStaticScene();
 
     CD3DX12_RESOURCE_BARRIER Barrier = CD3DX12_RESOURCE_BARRIER::Transition(GetCurrentBackBuffer(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
     pCommandList->ResourceBarrier(1, &Barrier);
@@ -80,7 +80,6 @@ void Dx12RenderLearn::D3dAppIns::Draw()
     ThrowIfFailed(hardwareResult);
     mCurrentBuffer = (mCurrentBuffer + 1) % mRenderTargetCount;
     FlushCommandQueue();
-
 }
 
 ID3D12Resource* Dx12RenderLearn::D3dAppIns::GetCurrentBackBuffer() const

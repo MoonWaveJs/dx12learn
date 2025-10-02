@@ -41,8 +41,8 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
             BufferHelper::UpdateUploadBuffer(entity->uploadConstantBuffer, &entityRenderBuffer, sizeof(EntityRenderBuffer));
 
             CD3DX12_GPU_DESCRIPTOR_HANDLE gpuHandle(currentScene->objectParamBufferHeap->GetGPUDescriptorHandleForHeapStart());
+            //gpuHandle.Offset(1, renderContext->mCbvUavDescriptorSize);
             renderContext->pCommandList->SetGraphicsRootDescriptorTable(0, gpuHandle);
-			gpuHandle.Offset(1, renderContext->mCbvUavDescriptorSize);
 
 			auto& model = entity->Model;
             for (int i = 0; i < entity->Model->SectionsNum;i++)

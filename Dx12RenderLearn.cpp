@@ -65,7 +65,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
-            DxLog::Log("PeekMessage");
+            //DxLog::Log("PeekMessage");
         }
         // Otherwise, do animation/game stuff.
         d3dAppIns->Draw();
