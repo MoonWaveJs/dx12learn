@@ -117,23 +117,73 @@ void FbxLoader::FnFbxLoaderInit()
 
 void FbxLoader::FnOutputScene(std::string fbx)
 {
-    bool lImportStatus = lImporter->Initialize(fbx.c_str(), -1);	// -1 表示让fbxsdk根据文件的扩展名去判断文件的格式
+    FbxNode* rootNode;
+    FbxScene* scene = FbxScene::Create(lSdkManager, "");
+
+    if (LoadFbxScene(fbx, rootNode, scene))
+    {
+        if (rootNode) {
+            for (int i = 0; i < rootNode->GetChildCount(); i++)
+                PrintNode(rootNode->GetChild(i));
+        }
+        rootNode->Destroy();
+        scene->Destroy();
+    }
+}
+
+bool IsMeshNode(FbxNode* pNode) 
+{
+    auto count = pNode->GetNodeAttributeCount();
+    for (int i = 0; i < count; i++)
+    {
+        auto attri = pNode->GetNodeAttributeByIndex(i);
+        if (attri && attri->GetAttributeType() == FbxNodeAttribute::eMesh)
+        {
+            return true;
+        }
+	}
+}
+
+bool FbxLoader::LoadFbxScene(std::string fbx, FbxNode*& outRootNode, FbxScene* scene)
+{
+    bool lImportStatus = lImporter->Initialize(fbx.c_str(), -1);
     if (!lImportStatus)
     {
         printf("Call to FbxImporter::Initialize() failed./n");
         printf("Error returned: %s/n/n", lImporter->GetStatus().GetErrorString());
-        exit(-1);
+		return false;
     }
-
-    FbxScene* scene = FbxScene::Create(lSdkManager, "");
     lImporter->Import(scene);
-    FbxNode* lRootNode = scene->GetRootNode();
-    if (lRootNode) {
-        for (int i = 0; i < lRootNode->GetChildCount(); i++)
-            PrintNode(lRootNode->GetChild(i));
+    outRootNode = scene->GetRootNode();
+	return true;
+}
+
+std::map<std::string, VertexData> GetVertexGroup(FbxNode* rootNode)
+{
+    for (int i = 0; i < rootNode->GetChildCount(); i++)
+    {
+        if (IsMeshNode(rootNode->GetChild(i)))
+        {
+            printf("Find Mesh Node: %s \n", rootNode->GetChild(i)->GetName());
+        }
+        GetVertexGroup(rootNode->GetChild(i));
     }
-    lRootNode->Destroy();
-    scene->Destroy();
+}
+
+std::map<std::string, VertexData> FbxLoader::FnGetVertexGroup(std::string fbx)
+{
+    FbxNode* rootNode;
+    FbxScene* scene = FbxScene::Create(lSdkManager, "");
+    if (LoadFbxScene(fbx, rootNode, scene)) 
+    {
+        if (rootNode) 
+        {
+            GetVertexGroup(rootNode);
+        }
+        rootNode->Destroy();
+        scene->Destroy();
+    }
+	return std::map<std::string, VertexData>();
 }
 
 
