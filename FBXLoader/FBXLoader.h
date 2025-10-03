@@ -5,19 +5,10 @@
 
 __declspec(dllexport) struct VertexData
 {
-    float tx;
-    float ty;
-    float tz;
-
-    float rx;
-    float ry;
-    float rz;
-
-    float sx;
-    float sy;
-    float sz;
-
-    
+	FbxDouble3 Position;
+	FbxDouble3 Rotation;
+	FbxDouble3 Scale;
+	FbxDouble3 Normal;
 };
 
 __declspec(dllexport) class FbxLoader

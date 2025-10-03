@@ -3,11 +3,25 @@ namespace Dx12RenderLearn
 {
     Model::Model()
     {
-        meshs = std::make_shared<vector<std::shared_ptr<Mesh>>>();
-        materials = std::make_shared<vector<std::shared_ptr<Material>>>();
-
-		meshs->push_back(std::make_shared<Mesh>());
-		materials->push_back(std::make_shared<Material>());
-		SectionsNum = 1;
+        mesh = std::make_shared<Mesh>();
+		materials.push_back(std::make_shared<Material>());
+    }
+    UINT Model::GetVertexNum()
+    {
+        int n = 0;
+        for (auto m : mesh->GetVertexNums())
+        {
+            n += m;
+        }
+        return n;
+    }
+    UINT Model::GetIndicesNum()
+    {
+        int n = 0;
+        for (auto m : mesh->GetIndicesNums())
+        {
+            n += m;
+        }
+        return n;
     }
 }

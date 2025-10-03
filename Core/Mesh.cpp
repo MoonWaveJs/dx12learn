@@ -2,20 +2,19 @@
 
 #include <DirectXColors.h>
 
-UINT Dx12RenderLearn::Mesh::GetVertexNum()
+std::vector<UINT> Dx12RenderLearn::Mesh::GetVertexNums()
 {
     // load from meta file info
-    return 8;
+    return { 8 };
 }
 
-UINT Dx12RenderLearn::Mesh::GetIndicesNum()
+std::vector<UINT> Dx12RenderLearn::Mesh::GetIndicesNums()
 {
-    return 36;
+    return { 36 };
 }
 
 void Dx12RenderLearn::Mesh::LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer)
 {
-    vertexBufferOffset = pVertexBuffer->size();
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(Colors::Red)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(-1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Black)));
     pVertexBuffer->push_back(Dx12RenderVertex(XMFLOAT3(+1.0f, +1.0f, -1.0f), XMFLOAT4(Colors::Red)));
@@ -28,7 +27,6 @@ void Dx12RenderLearn::Mesh::LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>&
 
 void Dx12RenderLearn::Mesh::LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer)
 {
-    indicesBufferOffset = pIndexBuffer->size();
     UINT indices[] =
     {
         // 立方体前表面

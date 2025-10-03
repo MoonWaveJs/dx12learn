@@ -44,18 +44,18 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
             renderContext->pCommandList->SetGraphicsRootDescriptorTable(0, gpuHandle);
 
 			auto& model = entity->Model;
-            for (int i = 0; i < entity->Model->SectionsNum;i++)
+            for (int i = 0; i < model->mesh->SectionsNum;i++)
             {
 				renderContext->pCommandList->IASetVertexBuffers(0, 1, currentScene->staticVertexBufferView.get());
 				renderContext->pCommandList->IASetIndexBuffer(currentScene->staticIndexBufferView.get());
                 if (!PSO.Get())
                 {
-                    CreatePSO(PSO, PGETMODELMATRIAL(model, i));
+                    CreatePSO(PSO, model->materials[i]);
                 }
                 renderContext->pCommandList->SetPipelineState(PSO.Get());
                 renderContext->pCommandList->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
                 // just one model for now,not suitable for multiple
-                renderContext->pCommandList->DrawIndexedInstanced(PGETMODELMESH(model,i)->GetIndicesNum(), 1, 0, 0, 0);
+                renderContext->pCommandList->DrawIndexedInstanced(model->GetIndicesNum(), 1, 0, 0, 0);
             }
             
         }

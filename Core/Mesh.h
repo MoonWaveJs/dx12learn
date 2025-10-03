@@ -11,13 +11,17 @@ namespace Dx12RenderLearn
     {
     private:
         // no smart pointer. this buffer life is manage by scene
-        UINT vertexBufferOffset;
-        UINT indicesBufferOffset;
-        UINT vertexNum = 0;
-        UINT indicesNum = 0;
+        UINT vertexBufferOffsets;
+        UINT indicesBufferOffsets;
+
+
+        std::vector<UINT> vertexNums;
+        std::vector<UINT> indicesNums;
+
     public:
-        UINT GetVertexNum();
-        UINT GetIndicesNum();
+        UINT SectionsNum{ 1 };
+        std::vector<UINT> GetVertexNums();
+        std::vector<UINT> GetIndicesNums();
         void LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer);
         void LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer);
 

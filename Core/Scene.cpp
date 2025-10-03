@@ -12,12 +12,9 @@ vector<std::shared_ptr<Model>> Dx12RenderLearn::Scene::CollectModels(vector<shar
 
     for (shared_ptr<StaticMeshEntity> entity : entities)
     {
-        for (int i = 0;i < entity->Model->SectionsNum;i++)
-        {
-            outVertexCount += PGETMODELMESH(entity->Model,i)->GetVertexNum();
-            outIndicesCount += PGETMODELMESH(entity->Model,i)->GetIndicesNum();
-            models.push_back(entity->Model);
-        }
+		outVertexCount += entity->Model->GetVertexNum();
+		outIndicesCount += entity->Model->GetIndicesNum();
+        models.push_back(entity->Model);
     }
     return std::move(models);
 }
@@ -50,11 +47,11 @@ Dx12RenderLearn::Scene::Scene(const string& path, std::shared_ptr<RenderContext>
 
     for (auto& model : models)
     {
-        for (int i = 0;i < model->SectionsNum;i++)
+        model->mesh->LoadVertexData(renderMeshVertices);
+        model->mesh->LoadIndicesData(renderMeshIndices);
+        for (int i = 0; i < model->materials.size(); i++)
         {
-            PGETMODELMESH(model,i)->LoadVertexData(renderMeshVertices);
-            PGETMODELMESH(model,i)->LoadIndicesData(renderMeshIndices);
-			PGETMODELMATRIAL(model, i)->CompileShaderIfNot();
+            model->materials[i]->CompileShaderIfNot();
         }
     }
 
