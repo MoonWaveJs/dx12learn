@@ -3,10 +3,19 @@
 #include <vector>
 #include <wrl/client.h>  
 #include "Dx12RenderVertex.h"
+#include <string>
 namespace Dx12RenderLearn
 {
     using namespace std;
     using namespace Microsoft::WRL;
+
+    struct MeshInfo 
+    {
+        UINT SectionsNum{ 1 };
+        vector<UINT> vertexNums;
+        vector<UINT> indicesNums;
+    };
+
     class Mesh
     {
     private:
@@ -14,14 +23,13 @@ namespace Dx12RenderLearn
         UINT vertexBufferOffsets;
         UINT indicesBufferOffsets;
 
-
-        std::vector<UINT> vertexNums;
-        std::vector<UINT> indicesNums;
+        MeshInfo meshInfo;
+		string meshPath;
 
     public:
-        UINT SectionsNum{ 1 };
-        std::vector<UINT> GetVertexNums();
-        std::vector<UINT> GetIndicesNums();
+        Mesh(std::string meshPath);
+        vector<UINT> GetVertexNums();
+        vector<UINT> GetIndicesNums();
         void LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer);
         void LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer);
 

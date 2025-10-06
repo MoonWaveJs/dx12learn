@@ -24,7 +24,7 @@ vector<std::shared_ptr<StaticMeshEntity>> Dx12RenderLearn::Scene::CollectEntites
    std::shared_ptr<StaticMeshEntity> entity = std::make_shared<StaticMeshEntity>();  
    entity->Model = make_shared<Model>();  
    vector<std::shared_ptr<StaticMeshEntity>> entities;  
-   entities.push_back(entity);  
+   entities.push_back(entity);
    return entities; 
 }
 

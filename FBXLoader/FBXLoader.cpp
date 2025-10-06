@@ -158,30 +158,33 @@ bool FbxLoader::LoadFbxScene(std::string fbx, FbxNode*& outRootNode, FbxScene* s
 	return true;
 }
 
-std::map<std::string, VertexData> GetVertexGroup(FbxNode* rootNode)
+std::map<std::string, VertexData> GetVertexGroup(FbxNode* rootNode, std::map<std::string, VertexData>* container)
 {
     for (int i = 0; i < rootNode->GetChildCount(); i++)
     {
         if (IsMeshNode(rootNode->GetChild(i)))
         {
             printf("Find Mesh Node: %s \n", rootNode->GetChild(i)->GetName());
+            FbxMesh* mesh = (FbxMesh*)rootNode->GetChild(i);
         }
-        GetVertexGroup(rootNode->GetChild(i));
+        GetVertexGroup(rootNode->GetChild(i), container);
     }
 }
 
 std::map<std::string, VertexData> FbxLoader::FnGetVertexGroup(std::string fbx)
 {
+    std::map<std::string, VertexData> container;
     FbxNode* rootNode;
     FbxScene* scene = FbxScene::Create(lSdkManager, "");
     if (LoadFbxScene(fbx, rootNode, scene)) 
     {
         if (rootNode) 
         {
-            GetVertexGroup(rootNode);
+            GetVertexGroup(rootNode,&container);
         }
         rootNode->Destroy();
         scene->Destroy();
+		return std::move(container);
     }
 	return std::map<std::string, VertexData>();
 }

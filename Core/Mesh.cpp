@@ -2,6 +2,10 @@
 
 #include <DirectXColors.h>
 
+Dx12RenderLearn::Mesh::Mesh(std::string meshPath)
+{
+}
+
 std::vector<UINT> Dx12RenderLearn::Mesh::GetVertexNums()
 {
     // load from meta file info
