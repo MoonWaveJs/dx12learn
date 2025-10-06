@@ -169,6 +169,7 @@ std::map<std::string, VertexData> GetVertexGroup(FbxNode* rootNode, std::map<std
         }
         GetVertexGroup(rootNode->GetChild(i), container);
     }
+	return std::move(*container);
 }
 
 std::map<std::string, VertexData> FbxLoader::FnGetVertexGroup(std::string fbx)
