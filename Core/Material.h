@@ -5,11 +5,10 @@
 #include <string>
 #include <wrl/client.h>
 
-using namespace Microsoft::WRL;
-using namespace std;
-
 namespace Dx12RenderLearn
 {
+    using namespace Microsoft::WRL;
+    using namespace std;
     class Material
     {
     public:

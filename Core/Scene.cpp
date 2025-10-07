@@ -12,19 +12,31 @@ vector<std::shared_ptr<Model>> Dx12RenderLearn::Scene::CollectModels(vector<shar
 
     for (shared_ptr<StaticMeshEntity> entity : entities)
     {
-		outVertexCount += entity->Model->GetVertexNum();
-		outIndicesCount += entity->Model->GetIndicesNum();
-        models.push_back(entity->Model);
+        auto mesh = entity->model->mesh;
+		outVertexCount += mesh->GetVertexData()->size();
+		outIndicesCount += mesh->GetIndexData()->size();
+        models.push_back(entity->model);
     }
     return std::move(models);
 }
 
 vector<std::shared_ptr<StaticMeshEntity>> Dx12RenderLearn::Scene::CollectEntites()  
 {  
+   vector<std::shared_ptr<StaticMeshEntity>> entities;
+
+   string path = "E:/Project/dx12-learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedDouble.FBX";
+   std::shared_ptr<StaticMeshEntity> entity1 = std::make_shared<StaticMeshEntity>();
+   entity1->model = make_shared<Model>(path);
+   entities.push_back(entity1);
+
+
    std::shared_ptr<StaticMeshEntity> entity = std::make_shared<StaticMeshEntity>();  
-   entity->Model = make_shared<Model>();  
-   vector<std::shared_ptr<StaticMeshEntity>> entities;  
+   path = "E:/Project/dx12-learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BaseCharacter.FBX";
+   entity->model = make_shared<Model>(path);
+   entity->SetScale(100, 100, 100);
+   entity->SetPosition(0, 0, 200);
    entities.push_back(entity);
+
    return entities; 
 }
 
@@ -47,11 +59,11 @@ Dx12RenderLearn::Scene::Scene(const string& path, std::shared_ptr<RenderContext>
 
     for (auto& model : models)
     {
-        model->mesh->LoadVertexData(renderMeshVertices);
-        model->mesh->LoadIndicesData(renderMeshIndices);
         for (int i = 0; i < model->materials.size(); i++)
         {
             model->materials[i]->CompileShaderIfNot();
+			renderMeshVertices->insert(renderMeshVertices->end(), model->mesh->GetVertexData()->begin(), model->mesh->GetVertexData()->end());
+			renderMeshIndices->insert(renderMeshIndices->end(), model->mesh->GetIndexData()->begin(), model->mesh->GetIndexData()->end());
         }
     }
 

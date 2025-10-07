@@ -4,21 +4,17 @@
 using namespace Microsoft::WRL;
 
 
-void Dx12RenderLearn::IEntity::Awake()
-{
-	isDirty = true;
-	
-}
-
-void Dx12RenderLearn::IEntity::Update()
-{
-	if (isDirty)
-	{
-
-	}
-}
-
 void Dx12RenderLearn::IEntity::InitTransformBuffer()
 {
 
+}
+
+void Dx12RenderLearn::IEntity::SetScale(float x, float y, float z)
+{
+	mTransform *= XMMatrixScaling(x, y, z);
+}
+
+void Dx12RenderLearn::IEntity::SetPosition(float x, float y, float z)
+{
+	mTransform *= XMMatrixTranslation(x, y, z);
 }

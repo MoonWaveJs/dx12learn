@@ -26,7 +26,7 @@ namespace Dx12RenderLearn
         XMMATRIX mTransform = XMMatrixIdentity();
         ComPtr<ID3D12Resource> uploadConstantBuffer;
     public:
-        void Awake();
-        void Update();
+        void SetScale(float x, float y, float z);
+        void SetPosition(float x, float y, float z);
     };
 }

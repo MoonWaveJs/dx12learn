@@ -4,34 +4,44 @@
 #include <wrl/client.h>  
 #include "Dx12RenderVertex.h"
 #include <string>
+#include <assimp/Importer.hpp>
+#include <assimp/postprocess.h>
+#include <assimp/scene.h>
+
 namespace Dx12RenderLearn
 {
-    using namespace std;
-    using namespace Microsoft::WRL;
-
-    struct MeshInfo 
+    struct MeshSection
     {
-        UINT SectionsNum{ 1 };
-        vector<UINT> vertexNums;
-        vector<UINT> indicesNums;
+        UINT vertexNum;
+        UINT indexNum;
+#ifdef _DEBUG
+        std::string sectionName;
+#endif
     };
 
     class Mesh
     {
     private:
-        // no smart pointer. this buffer life is manage by scene
-        UINT vertexBufferOffsets;
-        UINT indicesBufferOffsets;
 
-        MeshInfo meshInfo;
-		string meshPath;
+        std::string meshPath;
+
+        std::vector<MeshSection> sections;
+        std::shared_ptr<std::vector<Dx12RenderVertex>> vertexData;
+        std::shared_ptr<std::vector<UINT>> indexData;
+
+    private:
+        void ProcessNode(aiNode* node, const aiScene* scene);
+        void ProcessMesh(aiMesh* mesh, const aiScene* scene,MeshSection& section);
+
+        void LoadMeshData();
 
     public:
-        Mesh(std::string meshPath);
-        vector<UINT> GetVertexNums();
-        vector<UINT> GetIndicesNums();
-        void LoadVertexData(shared_ptr<vector<Dx12RenderVertex>>& pVertexBuffer);
-        void LoadIndicesData(shared_ptr<vector<UINT>>& pIndexBuffer);
+        Mesh(std::string& meshPath);
+        ~Mesh();
 
+        std::shared_ptr<std::vector<Dx12RenderVertex>> GetVertexData() { return vertexData; };
+        std::shared_ptr<std::vector<UINT>> GetIndexData() { return indexData; };
+        
+        std::vector<MeshSection> GetSections() { return sections; };
     };
 }

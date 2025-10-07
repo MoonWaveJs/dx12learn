@@ -8,12 +8,8 @@
 #include "../Render/Render.h" 
 #include <DirectXPackedVector.h>
 
-using namespace std;
-using namespace Microsoft::WRL;
-
 namespace Dx12RenderLearn
 {
-    using namespace  DirectX;
     struct GlobalParamBuffer
     {
         XMMATRIX gViewProj;

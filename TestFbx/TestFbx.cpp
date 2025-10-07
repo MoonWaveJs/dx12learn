@@ -10,7 +10,7 @@ int main()
     //std::cout << "Hello World!/n";
     using namespace Assimp;
     Importer importer;
-    std::string filename("C:/jiangshang/dx12learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedDouble.FBX");
+    std::string filename("E:/Project/dx12-learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedDouble.FBX");
     auto pAssimpScene = importer.ReadFile(filename.data(),
         aiProcess_Triangulate |             // 将多边形拆分
         aiProcess_ImproveCacheLocality |    // 改善缓存局部性

@@ -9,8 +9,6 @@ namespace Dx12RenderLearn
     public:
         std::shared_ptr<Mesh> mesh;
         vector<std::shared_ptr<Material>> materials; // 0 for error mat
-        Model();
-        UINT GetVertexNum();
-        UINT GetIndicesNum();
+        Model(string& path);
     };
 }

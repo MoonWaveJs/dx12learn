@@ -14,6 +14,16 @@ void Dx12RenderLearn::RenderPipeline::LoadScene(const string& path)
 
 void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
 {
+    XMMATRIX Proj = XMMatrixPerspectiveFovLH(0.25f * XM_PI,
+        static_cast<float>(renderContext->Width) / renderContext->Height, 1.0f, 2000.0f);
+
+    XMVECTOR pos = XMVectorSet(1000.0f, 1000.0f, 1000.0f, 1.0f);
+    XMVECTOR target = XMVectorZero();
+    XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+    XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
+
+
+
     ID3D12DescriptorHeap* descriptorHeaps[] = {
         currentScene->objectParamBufferHeap.Get()
     };
@@ -21,43 +31,41 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
 
     auto signtrue = GetOrCreateSignature(renderContext->pDevice);
     renderContext->pCommandList->SetGraphicsRootSignature(signtrue.Get());
+    renderContext->pCommandList->IASetVertexBuffers(0, 1, currentScene->staticVertexBufferView.get());
+    renderContext->pCommandList->IASetIndexBuffer(currentScene->staticIndexBufferView.get());
 
     if (currentScene && currentScene->sceneEntities)
     {
+        UINT startIndex = 0;
+        UINT baseVertex = 0;
+        UINT offset = 0;
         for (const auto& entity : *(currentScene->sceneEntities))
         {
-            XMMATRIX Proj = XMMatrixPerspectiveFovLH(0.25f * XM_PI,
-                static_cast<float>(renderContext->Width) / renderContext->Height, 1.0f, 1000.0f);
+            CD3DX12_GPU_DESCRIPTOR_HANDLE gpuHandle(currentScene->objectParamBufferHeap->GetGPUDescriptorHandleForHeapStart());
+            renderContext->pCommandList->SetGraphicsRootDescriptorTable(0, gpuHandle.Offset(offset, renderContext->mCbvUavDescriptorSize));
 
-            XMVECTOR pos = XMVectorSet(10,10,10,1.0f);
-            XMVECTOR target = XMVectorZero();
-            XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
-            XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
-            
             EntityRenderBuffer entityRenderBuffer;
-
-            entityRenderBuffer.mTransform = entity->mTransform * view *Proj;
-			
+            entityRenderBuffer.mTransform = (entity->mTransform * view *Proj);
             BufferHelper::UpdateUploadBuffer(entity->uploadConstantBuffer, &entityRenderBuffer, sizeof(EntityRenderBuffer));
 
-            CD3DX12_GPU_DESCRIPTOR_HANDLE gpuHandle(currentScene->objectParamBufferHeap->GetGPUDescriptorHandleForHeapStart());
-            renderContext->pCommandList->SetGraphicsRootDescriptorTable(0, gpuHandle);
-
-			auto& model = entity->Model;
-            for (int i = 0; i < model->mesh->SectionsNum;i++)
+			auto& model = entity->model;
+            auto sections = model->mesh->GetSections();
+            for (int i = 0; i < sections.size();i++)
             {
-				renderContext->pCommandList->IASetVertexBuffers(0, 1, currentScene->staticVertexBufferView.get());
-				renderContext->pCommandList->IASetIndexBuffer(currentScene->staticIndexBufferView.get());
+
                 if (!PSO.Get())
                 {
                     CreatePSO(PSO, model->materials[i]);
                 }
                 renderContext->pCommandList->SetPipelineState(PSO.Get());
                 renderContext->pCommandList->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
                 // just one model for now,not suitable for multiple
-                renderContext->pCommandList->DrawIndexedInstanced(model->GetIndicesNum(), 1, 0, 0, 0);
+                renderContext->pCommandList->DrawIndexedInstanced(sections[i].indexNum, 1, startIndex, baseVertex, 0);
+				startIndex += sections[i].indexNum;
+				baseVertex += sections[i].vertexNum;
             }
-            
+            offset++;
         }
     }
 }
@@ -95,7 +103,7 @@ void Dx12RenderLearn::RenderPipeline::CreateRootSignature(ComPtr<ID3D12Device> d
 {
     CD3DX12_ROOT_PARAMETER slot_root_parameter[1];
     CD3DX12_DESCRIPTOR_RANGE cbvTable;
-    cbvTable.Init(D3D12_DESCRIPTOR_RANGE_TYPE_CBV, 1, 0);
+    cbvTable.Init(D3D12_DESCRIPTOR_RANGE_TYPE_CBV, currentScene->sceneEntities->size(), 0);
     slot_root_parameter[0].InitAsDescriptorTable(1, &cbvTable);
 
     CD3DX12_ROOT_SIGNATURE_DESC root_signature_desc(1, slot_root_parameter, 0, nullptr, D3D12_ROOT_SIGNATURE_FLAG_ALLOW_INPUT_ASSEMBLER_INPUT_LAYOUT);
