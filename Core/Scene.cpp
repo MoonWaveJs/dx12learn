@@ -1,9 +1,9 @@
 #include "Scene.h"
-
 #include <fstream>
-
 #include "StaticMeshEntity.h"
 #include "../Helper/BufferHelper.h"
+#include "nlohmann/json.hpp"
+#include "../Helper/Paths.h"
 using namespace Dx12RenderLearn;
 
 vector<std::shared_ptr<Model>> Dx12RenderLearn::Scene::CollectModels(vector<shared_ptr<StaticMeshEntity>> entities,UINT& outVertexCount,UINT& outIndicesCount)
@@ -21,23 +21,46 @@ vector<std::shared_ptr<Model>> Dx12RenderLearn::Scene::CollectModels(vector<shar
 }
 
 vector<std::shared_ptr<StaticMeshEntity>> Dx12RenderLearn::Scene::CollectEntites()  
-{  
-   vector<std::shared_ptr<StaticMeshEntity>> entities;
+{
+    vector<std::shared_ptr<StaticMeshEntity>> entities;
 
-   string path = "E:/Project/dx12-learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BedDouble.FBX";
-   std::shared_ptr<StaticMeshEntity> entity1 = std::make_shared<StaticMeshEntity>();
-   entity1->model = make_shared<Model>(path);
-   entities.push_back(entity1);
+    std::filesystem::path sceneFileFolder =  Paths::GetProjFolder();
+    std::filesystem::path sceneFile = "Assets/World/SimpleScene.txt";
+    std::ifstream sceneFileStream(sceneFileFolder / sceneFile);
+    if (sceneFileStream)
+    {
+        std::string contents((std::istreambuf_iterator<char>(sceneFileStream)),std::istreambuf_iterator<char>());
+        nlohmann::json sceneJson = nlohmann::json::parse(contents);
+        for (auto& entityData : sceneJson)
+        {
+            string modelPath;
+            entityData.at("MeshPath").get_to(modelPath);
+            std::shared_ptr<StaticMeshEntity> entity = std::make_shared<StaticMeshEntity>(modelPath);
+            
+            float x, y, z, w;
+            
+            entityData["Scale"].at("x").get_to(x);
+            entityData["Scale"].at("y").get_to(y);
+            entityData["Scale"].at("z").get_to(z);
+            entity->SetScale(x, y, z);
+            
+            entityData["Rotation"].at("x").get_to(x);
+            entityData["Rotation"].at("y").get_to(y);
+            entityData["Rotation"].at("z").get_to(z);
+            entityData["Rotation"].at("w").get_to(w);
+            entity->SetRotation(x, y, z, w);
+
+            entityData["Position"].at("x").get_to(x);
+            entityData["Position"].at("y").get_to(y);
+            entityData["Position"].at("z").get_to(z);
+            entity->SetPosition(x, y, z);
 
 
-   std::shared_ptr<StaticMeshEntity> entity = std::make_shared<StaticMeshEntity>();  
-   path = "E:/Project/dx12-learn/Assets/UnityTechnologies/Basic Asset Pack Interior/Models/BaseCharacter.FBX";
-   entity->model = make_shared<Model>(path);
-   entity->SetScale(100, 100, 100);
-   entity->SetPosition(0, 0, 200);
-   entities.push_back(entity);
 
-   return entities; 
+            entities.push_back(entity);
+        }
+    }
+    return entities; 
 }
 
 Dx12RenderLearn::Scene::Scene(const string& path, std::shared_ptr<RenderContext> conext)
@@ -49,6 +72,7 @@ Dx12RenderLearn::Scene::Scene(const string& path, std::shared_ptr<RenderContext>
     UINT staticMeshIndicesNum = 0;
     auto collectEntities =  CollectEntites();
     sceneEntities = make_shared<vector<shared_ptr<StaticMeshEntity>>>(collectEntities);
+
     CreatePerobjectBufferView();
     auto models = CollectModels(collectEntities,staticMeshVertexNum,staticMeshIndicesNum);
     

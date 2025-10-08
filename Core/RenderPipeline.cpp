@@ -17,12 +17,10 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
     XMMATRIX Proj = XMMatrixPerspectiveFovLH(0.25f * XM_PI,
         static_cast<float>(renderContext->Width) / renderContext->Height, 1.0f, 2000.0f);
 
-    XMVECTOR pos = XMVectorSet(1000.0f, 1000.0f, 1000.0f, 1.0f);
+    XMVECTOR pos = XMVectorSet(10.0f, 10.0f, 10.0f, 0.0f);
     XMVECTOR target = XMVectorZero();
     XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
     XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
-
-
 
     ID3D12DescriptorHeap* descriptorHeaps[] = {
         currentScene->objectParamBufferHeap.Get()

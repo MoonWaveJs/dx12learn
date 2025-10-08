@@ -15,19 +15,33 @@ Dx12RenderLearn::Mesh::~Mesh()
 
 }
 
-void Dx12RenderLearn::Mesh::ProcessMesh(aiMesh* mesh, const aiScene* scene, MeshSection& section)
+void Dx12RenderLearn::Mesh::ProcessMesh(aiMesh* mesh, const aiScene* scene, MeshSection& section, aiMatrix4x4 mat)
 {
+    XMFLOAT4 testColor;
+    testColor.x = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    testColor.y = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    testColor.z = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    testColor.w = 1.0f;
+    aiVector3D trans, scale, rotate;
+    mat.Decompose(scale, rotate, trans);
     // Walk through each of the mesh's vertices
     for (UINT i = 0; i < mesh->mNumVertices; i++) 
     {
         XMFLOAT3 pos;
         auto v = mesh->mVertices[i];
+
         v *= scene->mRootNode->mTransformation;
+        v -= aiVector3D(trans.x, trans.y, trans.z);
+
+        v /= 100.0f;
+
         pos.x = v.x;
         pos.y = v.y;
         pos.z = v.z;
 
 		XMFLOAT4 color(1,1,1,1);
+		color = testColor;
+
         if (mesh->GetNumColorChannels() > 0)
         {
 			color.x = mesh->mColors[0][i].r;
@@ -68,8 +82,9 @@ void Dx12RenderLearn::Mesh::ProcessMesh(aiMesh* mesh, const aiScene* scene, Mesh
     section.indexNum = indexNum;
 }
 
-void Dx12RenderLearn::Mesh::ProcessNode(aiNode* node, const aiScene* scene)
+void Dx12RenderLearn::Mesh::ProcessNode(aiNode* node, const aiScene* scene, aiMatrix4x4 mat)
 {
+    mat *= node->mTransformation;
 	aiVector3D trans, scale,rotate;
     node->mTransformation.Decompose(scale, rotate, trans);
     for (UINT i = 0; i < node->mNumMeshes; i++) 
@@ -82,22 +97,24 @@ void Dx12RenderLearn::Mesh::ProcessNode(aiNode* node, const aiScene* scene)
 
 		section.sectionName = nodeName + "_" + matName;
 #endif
-        ProcessMesh(mesh, scene,section);
+        
+        ProcessMesh(mesh, scene,section,mat);
         sections.push_back(section);
     }
 
     for (UINT i = 0; i < node->mNumChildren; i++)
     {
-        ProcessNode(node->mChildren[i], scene);
+        ProcessNode(node->mChildren[i], scene,mat);
     }
 }
 
 void Dx12RenderLearn::Mesh::LoadMeshData()
 {
     Assimp::Importer importer;
-    auto pAssimpScene = importer.ReadFile(meshPath.data(),
-        aiProcess_ConvertToLeftHanded |// aiProcess_JoinIdenticalVertices|
-        aiProcess_Triangulate);
+    auto pAssimpScene = importer.ReadFile(meshPath.data(), 
+        aiProcess_ConvertToLeftHanded |// |aiProcess_JoinIdenticalVertices|
+        aiProcess_Triangulate
+        );
 
-    ProcessNode(pAssimpScene->mRootNode, pAssimpScene);
+    ProcessNode(pAssimpScene->mRootNode, pAssimpScene,pAssimpScene->mRootNode->mTransformation);
 }

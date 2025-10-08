@@ -28,5 +28,6 @@ namespace Dx12RenderLearn
     public:
         void SetScale(float x, float y, float z);
         void SetPosition(float x, float y, float z);
+        void SetRotation(float x, float y, float z, float w);
     };
 }

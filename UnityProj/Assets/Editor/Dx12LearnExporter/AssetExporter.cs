@@ -75,6 +75,11 @@ namespace Editor.Dx12LearnExporter
         {
             return new DXVector4(value.x, value.y, value.z,value.w);
         }
+        
+        public static implicit operator DXVector4(Quaternion value)
+        {
+            return new DXVector4(value.x, value.y, value.z,value.w);
+        }
     }
     
     [Serializable]
@@ -83,7 +88,7 @@ namespace Editor.Dx12LearnExporter
         public string Name;
         public DXVector3 Position;
         public DXVector3 Scale;
-        public DXVector3 Rotation;
+        public DXVector4 Rotation;
     }
     [Serializable]
     class DxMesh
@@ -215,20 +220,30 @@ namespace Editor.Dx12LearnExporter
             var meshes = GameObject.FindObjectsOfType<MeshFilter>(false);
             foreach (var mesh in meshes)
             {
-                if (mesh.GetComponent<MeshRenderer>())
+                if (mesh.GetComponent<MeshRenderer>() && AssetDatabase.GetAssetPath(mesh.sharedMesh).StartsWith("Assets"))
                 {
-                    StaticMeshEntity staticMeshEntity = new StaticMeshEntity();
-                    staticMeshEntity.Name = mesh.gameObject.name;
-                    staticMeshEntity.Position = mesh.transform.position;
-                    staticMeshEntity.Scale = mesh.transform.lossyScale;
-                    staticMeshEntity.Rotation = mesh.transform.rotation.eulerAngles;
-                    staticMeshEntity.MeshPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
-                    staticMeshes.Add(staticMeshEntity);
-                    ExportMeshAsset(mesh,staticMeshEntity.MeshPath);
+                    if (mesh.gameObject.activeSelf)
+                    {
+                        StaticMeshEntity staticMeshEntity = new StaticMeshEntity();
+                        staticMeshEntity.Name = mesh.gameObject.name;
+                        staticMeshEntity.Position = mesh.transform.position;
+                        staticMeshEntity.Scale = mesh.transform.lossyScale;
+                        
+                        Quaternion outsideRotation = mesh.transform.rotation;
+                        // Quaternion outsideRotation = Quaternion.Euler(new Vector3(euler.y, euler.x, euler.z));
+                        staticMeshEntity.Rotation = outsideRotation;
+                        staticMeshEntity.MeshPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
+                        staticMeshes.Add(staticMeshEntity);
+                        ExportMeshAsset(mesh,staticMeshEntity.MeshPath);
+                    }
+
                 }
             }
+            
+            string serializedData = JsonConvert.SerializeObject(staticMeshes, Formatting.Indented);
 
-            Debug.Log(JsonConvert.SerializeObject(staticMeshes));
+            // 保存数据到txt文件
+            System.IO.File.WriteAllText(Path.Combine(Paths.project, "..","Assets\\World\\SimpleScene.txt"), serializedData);
         }
     }
 }

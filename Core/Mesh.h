@@ -30,8 +30,8 @@ namespace Dx12RenderLearn
         std::shared_ptr<std::vector<UINT>> indexData;
 
     private:
-        void ProcessNode(aiNode* node, const aiScene* scene);
-        void ProcessMesh(aiMesh* mesh, const aiScene* scene,MeshSection& section);
+        void ProcessNode(aiNode* node, const aiScene* scene, aiMatrix4x4 mat);
+        void ProcessMesh(aiMesh* mesh, const aiScene* scene,MeshSection& section, aiMatrix4x4 mat);
 
         void LoadMeshData();
 

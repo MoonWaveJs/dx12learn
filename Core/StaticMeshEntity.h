@@ -9,6 +9,6 @@ namespace Dx12RenderLearn
     {
     public:
         std::shared_ptr<Model> model;
-        StaticMeshEntity();
+        StaticMeshEntity(std::string modelPath);
     };
 }
