@@ -1,6 +1,9 @@
 #include "Mesh.h"
 #include <DirectXColors.h>
 #include "../Helper/BufferHelper.h"
+#include "../Helper/Paths.h"
+#include "nlohmann/json.hpp"
+#include <fstream>
 
 Dx12RenderLearn::Mesh::Mesh(std::string& meshPath)
 {
@@ -14,6 +17,8 @@ Dx12RenderLearn::Mesh::~Mesh()
 {
 
 }
+#pragma region Unused
+
 
 void Dx12RenderLearn::Mesh::ProcessMesh(aiMesh* mesh, const aiScene* scene, MeshSection& section, aiMatrix4x4 mat)
 {
@@ -107,14 +112,102 @@ void Dx12RenderLearn::Mesh::ProcessNode(aiNode* node, const aiScene* scene, aiMa
         ProcessNode(node->mChildren[i], scene,mat);
     }
 }
+#pragma endregion
 
 void Dx12RenderLearn::Mesh::LoadMeshData()
 {
-    Assimp::Importer importer;
-    auto pAssimpScene = importer.ReadFile(meshPath.data(), 
-        aiProcess_ConvertToLeftHanded |// |aiProcess_JoinIdenticalVertices|
-        aiProcess_Triangulate
-        );
+#pragma region Unused
 
-    ProcessNode(pAssimpScene->mRootNode, pAssimpScene,pAssimpScene->mRootNode->mTransformation);
+    //Assimp::Importer importer;
+    //auto pAssimpScene = importer.ReadFile(meshPath.data(), 
+    //    aiProcess_ConvertToLeftHanded |// |aiProcess_JoinIdenticalVertices|
+    //    aiProcess_Triangulate
+    //    );
+
+    //ProcessNode(pAssimpScene->mRootNode, pAssimpScene,pAssimpScene->mRootNode->mTransformation);
+
+#pragma endregion
+
+    std::filesystem::path sceneFileFolder = Paths::GetProjFolder();
+    std::filesystem::path assetFolder = "Assets";
+    std::ifstream sceneFileStream(sceneFileFolder / assetFolder / meshPath.data());
+    if (sceneFileStream)
+    {
+        std::string contents((std::istreambuf_iterator<char>(sceneFileStream)), std::istreambuf_iterator<char>());
+        nlohmann::json meshJson = nlohmann::json::parse(contents);
+        for (auto& p : meshJson["SubMeshInfo"]) 
+        {
+            MeshSection section;
+            p.at("vertexCount").get_to(section.vertexNum);
+			p.at("indexCount").get_to(section.indexNum);
+#ifdef _DEBUG
+			p.at("name").get_to(section.sectionName);
+#endif
+			sections.push_back(section);
+        }
+        XMFLOAT4 testColor;
+        testColor.x = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+        testColor.y = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+        testColor.z = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+        testColor.w = 1.0f;
+        for(int i = 0; i < meshJson["Position"].size();i++)
+        {
+            XMFLOAT3 position;
+            XMFLOAT3 normal;
+            XMFLOAT4 color;
+            XMFLOAT4 textureCoord0;
+
+			meshJson["Position"][i].at("x").get_to(position.x) * 0.01;
+			meshJson["Position"][i].at("y").get_to(position.y) * 0.01;
+			meshJson["Position"][i].at("z").get_to(position.z) * 0.01;
+
+            if (meshJson["Normal"].size() > i)
+            {
+                meshJson["Normal"][i].at("x").get_to(normal.x);
+                meshJson["Normal"][i].at("y").get_to(normal.y);
+                meshJson["Normal"][i].at("z").get_to(normal.z);
+            }
+            else
+            {
+                normal = XMFLOAT3(0.0f, 1.0f, 0.0f);
+            }
+
+            if (meshJson["Color"].size() > i)
+            {
+                meshJson["Color"][i].at("x").get_to(color.x);
+                meshJson["Color"][i].at("y").get_to(color.y);
+                meshJson["Color"][i].at("z").get_to(color.z);
+                meshJson["Color"][i].at("w").get_to(color.w);
+            }
+            else
+            {
+                color = testColor;
+			}
+
+            if (meshJson["TexCoord0"].size() > i)
+            {
+                meshJson["TexCoord0"][i].at("x").get_to(textureCoord0.x);
+                meshJson["TexCoord0"][i].at("y").get_to(textureCoord0.y);
+                meshJson["TexCoord0"][i].at("z").get_to(textureCoord0.z);
+                meshJson["TexCoord0"][i].at("w").get_to(textureCoord0.w);
+            }
+            else
+            {
+                textureCoord0 = XMFLOAT4(0.0f, 0.0f, 0.0f, 0.0f);
+            }
+            Dx12RenderVertex vertex(position, normal, color, textureCoord0);
+            vertexData->push_back(vertex);
+        }
+
+        for (int i = 0; i < meshJson["SubMeshIndices"].size(); i++)
+        {
+            UINT index = 0;
+            auto subMeshindices = meshJson["SubMeshIndices"][i];
+            for (int j = 0; j < subMeshindices.size(); j++)
+            {
+                subMeshindices[j].get_to(index);
+                indexData->push_back(index);
+			}
+		}
+    }
 }

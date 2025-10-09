@@ -17,8 +17,8 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
     XMMATRIX Proj = XMMatrixPerspectiveFovLH(0.25f * XM_PI,
         static_cast<float>(renderContext->Width) / renderContext->Height, 1.0f, 2000.0f);
 
-    XMVECTOR pos = XMVectorSet(10.0f, 10.0f, 10.0f, 0.0f);
-    XMVECTOR target = XMVectorZero();
+    XMVECTOR pos = XMVectorSet(-2.0f, 10.0f, -10.0f, 0.0f);
+    XMVECTOR target = XMVectorSet(-3.0f, 0.0f, -3.0f, 0.0f);
     XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
     XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
 
@@ -48,6 +48,8 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
 
 			auto& model = entity->model;
             auto sections = model->mesh->GetSections();
+			UINT sectionVertext = 0;
+
             for (int i = 0; i < sections.size();i++)
             {
 
@@ -60,9 +62,10 @@ void Dx12RenderLearn::RenderPipeline::RenderStaticScene()
 
                 // just one model for now,not suitable for multiple
                 renderContext->pCommandList->DrawIndexedInstanced(sections[i].indexNum, 1, startIndex, baseVertex, 0);
-				startIndex += sections[i].indexNum;
-				baseVertex += sections[i].vertexNum;
+				sectionVertext += sections[i].vertexNum;
+                startIndex += sections[i].indexNum;
             }
+            baseVertex += sectionVertext;
             offset++;
         }
     }

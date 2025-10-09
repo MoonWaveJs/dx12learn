@@ -98,6 +98,9 @@ namespace Editor.Dx12LearnExporter
         public DxColor32[] Color;
         public DXVector2[] Texcoord0;
         public DXVector2[] Texcoord1;
+        
+        public DxMeshInfo[] SubMeshInfo;
+        public int[][] SubMeshIndices;
     }
 
     [Serializable]
@@ -149,6 +152,7 @@ namespace Editor.Dx12LearnExporter
 
         //     Number of vertices used by the index buffer of this sub-mesh.
         public int vertexCount { get; set; }
+        public string name { get; set; }
 
         public static implicit operator DxMeshInfo(SubMeshDescriptor value)
         {
@@ -170,47 +174,60 @@ namespace Editor.Dx12LearnExporter
     {
         public static void SerializeToBinary<T>(T obj,string path)
         {
-            using (FileStream fileStream = new FileStream(path, FileMode.Create))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(fileStream, obj);
-                fileStream.Flush();
-            }
+            string serializedData = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            // 保存数据到txt文件
+            System.IO.File.WriteAllText(path, serializedData);
+            // using (FileStream fileStream = new FileStream(path, FileMode.Create))
+            // {
+            //     BinaryFormatter bf = new BinaryFormatter();
+            //     bf.Serialize(fileStream, obj);
+            //     fileStream.Flush();
+            // } 
         }
         
-        private static void ExportMeshAsset(MeshFilter filter,string meshPath)
+        private static void ExportMeshAsset(string meshPath)
         {
             string directory = Path.Combine(Paths.project, "..",Path.GetDirectoryName(meshPath));
             string dest = Path.Combine(Paths.project, "..",meshPath);
             string source = Path.Combine(Paths.project,meshPath);
-            // string savePath = Path.Combine(directory, Path.GetFileName(meshPath)+".dxMesh");
+            
             if (File.Exists(source))
             {
                 Directory.CreateDirectory(directory);
-                File.Copy(source,dest,true);
+                // File.Copy(source,dest,true);
             }
-           //  DxMesh mesh = new DxMesh();
-           //  Vector3[] pos = filter.sharedMesh.vertices.ToArray();
-           //  mesh.Position = pos.Select(p => new DXVector3(p.x,p.y,p.z)).ToArray();
-           //  Vector3[] normal = filter.sharedMesh.normals.ToArray();
-           //  mesh.Normal = normal.Select(p => new DXVector3(p.x,p.y,p.z)).ToArray();
-           //  Vector2[] uv0 = filter.sharedMesh.uv.ToArray();
-           //  Vector2[] uv1 = filter.sharedMesh.uv2.ToArray();
-           //  mesh.Texcoord0 = uv0.Select(p => new DXVector2(p.x,p.y)).ToArray();
-           //  mesh.Texcoord1 = uv1.Select(p => new DXVector2(p.x,p.y)).ToArray();
-           //  var colors  = filter.sharedMesh.colors32.ToArray();
-           //  mesh.Color = colors.Select(p => new DxColor32(p.r,p.g,p.b,p.a)).ToArray();
-           // SerializeToBinary(mesh, savePath);
-           //
-           //  DxMeshInfo[] dxMeshs = new DxMeshInfo[filter.sharedMesh.subMeshCount];
-           //  for(int i = 0; i <  filter.sharedMesh.subMeshCount; i++) 
-           //  {
-           //      dxMeshs[i] = filter.sharedMesh.GetSubMesh(i);
-           //  }
-           //
-           //  savePath = Path.Combine(directory, Path.GetFileName(meshPath) + ".dxMeshInfo");
-           //  SerializeToBinary(dxMeshs, savePath);
-           
+            var sharedMeshes = AssetDatabase.LoadAllAssetsAtPath(meshPath);
+            foreach (var sharedMesh1 in sharedMeshes)
+            {
+                if (sharedMesh1 is Mesh sharedMesh)
+                {
+                    string savePath = Path.Combine(directory, Path.GetFileName(sharedMesh.name)+".dxMesh");
+                    DxMesh mesh = new DxMesh();
+
+                    Vector3[] pos = sharedMesh.vertices.ToArray();
+                    mesh.Position = pos.Select(p => new DXVector3(p.x,p.y,p.z)).ToArray();
+                    Vector3[] normal = sharedMesh.normals.ToArray();
+                    mesh.Normal = normal.Select(p => new DXVector3(p.x,p.y,p.z)).ToArray();
+                    Vector2[] uv0 = sharedMesh.uv.ToArray();
+                    Vector2[] uv1 = sharedMesh.uv2.ToArray();
+                    mesh.Texcoord0 = uv0.Select(p => new DXVector2(p.x,p.y)).ToArray();
+                    mesh.Texcoord1 = uv1.Select(p => new DXVector2(p.x,p.y)).ToArray();
+                    var colors  = sharedMesh.colors32.ToArray();
+                    mesh.Color = colors.Select(p => new DxColor32(p.r,p.g,p.b,p.a)).ToArray();
+                    
+                    DxMeshInfo[] dxMeshs = new DxMeshInfo[sharedMesh.subMeshCount];
+                    mesh.SubMeshIndices = new int[sharedMesh.subMeshCount][];
+                    for(int i = 0; i <  sharedMesh.subMeshCount; i++) 
+                    {
+                        dxMeshs[i] = sharedMesh.GetSubMesh(i);
+                        dxMeshs[i].name = sharedMesh.name + "_" + i;
+                        var indices = sharedMesh.GetIndices(i,false);
+                        mesh.SubMeshIndices[i] = indices;
+                    }
+                    mesh.SubMeshInfo = dxMeshs;
+                    SerializeToBinary(mesh, savePath);
+                }
+            }
         }
 
         [MenuItem("Dx12Learn/导出场景")]
@@ -232,9 +249,13 @@ namespace Editor.Dx12LearnExporter
                         Quaternion outsideRotation = mesh.transform.rotation;
                         // Quaternion outsideRotation = Quaternion.Euler(new Vector3(euler.y, euler.x, euler.z));
                         staticMeshEntity.Rotation = outsideRotation;
-                        staticMeshEntity.MeshPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
+                        var fbxPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
+                        string directory = Path.Combine(Paths.project, "..",Path.GetDirectoryName(fbxPath));
+                        string meshPath = Path.Combine(directory, Path.GetFileName((mesh.sharedMesh.name)+".dxMesh"));
+                        staticMeshEntity.MeshPath = meshPath;
+                        
                         staticMeshes.Add(staticMeshEntity);
-                        ExportMeshAsset(mesh,staticMeshEntity.MeshPath);
+                        ExportMeshAsset(AssetDatabase.GetAssetPath(mesh.sharedMesh));
                     }
 
                 }
