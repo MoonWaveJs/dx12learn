@@ -129,8 +129,7 @@ void Dx12RenderLearn::Mesh::LoadMeshData()
 #pragma endregion
 
     std::filesystem::path sceneFileFolder = Paths::GetProjFolder();
-    std::filesystem::path assetFolder = "Assets";
-    std::ifstream sceneFileStream(sceneFileFolder / assetFolder / meshPath.data());
+    std::ifstream sceneFileStream(sceneFileFolder / meshPath.data());
     if (sceneFileStream)
     {
         std::string contents((std::istreambuf_iterator<char>(sceneFileStream)), std::istreambuf_iterator<char>());

@@ -250,7 +250,7 @@ namespace Editor.Dx12LearnExporter
                         // Quaternion outsideRotation = Quaternion.Euler(new Vector3(euler.y, euler.x, euler.z));
                         staticMeshEntity.Rotation = outsideRotation;
                         var fbxPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
-                        string directory = Path.Combine(Paths.project, "..",Path.GetDirectoryName(fbxPath));
+                        string directory = Path.Combine(Path.GetDirectoryName(fbxPath));
                         string meshPath = Path.Combine(directory, Path.GetFileName((mesh.sharedMesh.name)+".dxMesh"));
                         staticMeshEntity.MeshPath = meshPath;
                         
