@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Pipes;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -169,6 +170,13 @@ namespace Editor.Dx12LearnExporter
         }
     }
 
+    [Serializable]
+    public struct DxTex
+    {
+        public int width;
+        public int height;
+        public TextureFormat format;
+    }
 
     public class AssetExporter
     {
@@ -230,50 +238,93 @@ namespace Editor.Dx12LearnExporter
             }
         }
 
+        private static bool AddBytes(List<byte> bytes, Color32 data)
+        {
+            bytes.Add(data.r);
+            bytes.Add(data.g);
+            bytes.Add(data.b);
+            bytes.Add(data.a);
+            return true;
+        }
+        private static void ExportTextureAsset(Texture2D texture2D)
+        {
+            var texturePath= AssetDatabase.GetAssetPath(texture2D);
+            string directory = Path.Combine(Paths.project, "..", Path.GetDirectoryName(texturePath));
+            string source = Path.Combine(Paths.project, texturePath);
+
+            if (File.Exists(source))
+            {
+                Directory.CreateDirectory(directory);
+                // File.Copy(source, dest, true);
+            }
+            var pixels = texture2D.GetPixels32();
+            
+            List<byte> bytes = new  List<byte>(pixels.Length * 4);
+
+            DxTex dxtex = new DxTex();
+            dxtex.width = texture2D.width;
+            dxtex.height = texture2D.height;
+            dxtex.format = texture2D.format;
+            string savePath = Path.Combine(directory, Path.GetFileName(texture2D.name)+".dxTexInfo");
+            string savePath1 = Path.Combine(directory, Path.GetFileName(texture2D.name)+".dxTex");
+            SerializeToBinary(dxtex, savePath);
+            
+            Array.ForEach(pixels, (Color32 data) => AddBytes(bytes, data));
+            File.WriteAllBytes(savePath1,bytes.ToArray());
+
+
+        }
+
         [MenuItem("Dx12Learn/导出场景")]
         private static void ExportScene()
         {
             List<StaticMeshEntity> staticMeshes = new List<StaticMeshEntity>(); 
             var meshes = GameObject.FindObjectsOfType<MeshFilter>(false);
+            // var skinMeshRenders = GameObject.FindObjectsOfType<SkinnedMeshRenderer>(false);
+            // var skinMeshes = skinMeshRenders.Select(skin => skin.sharedMesh).ToArray();
+            //
+            
+            
             foreach (var mesh in meshes)
             {
                 if (mesh.GetComponent<MeshRenderer>())
                 {
                     if (mesh.gameObject.activeSelf)
                     {
-                        var mat = mesh.GetComponent<MeshRenderer>().sharedMaterial;
-
-                        var matTexs = mat.GetTexturePropertyNames();
-                        var texs = matTexs.Select(p => mat.GetTexture(p)).ToArray();
-
-                        foreach (var tex in texs)
+                        var mats = mesh.GetComponent<MeshRenderer>().sharedMaterials;
+                        foreach (var mat in mats)
                         {
-                            bool isAssets = AssetDatabase.GetAssetPath(tex).StartsWith("Assets");
-                            if (isAssets && tex is Texture2D texture2D)
+                            var matTexs = mat.GetTexturePropertyNames();
+                            var texs = matTexs.Select(p => mat.GetTexture(p)).ToArray();
+
+                            foreach (var tex in texs)
                             {
-                                texture2D.GetRawTextureData();
+                                bool isAssets = AssetDatabase.GetAssetPath(tex).StartsWith("Assets");
+                                if (isAssets && tex is Texture2D texture2D)
+                                {
+                                    ExportTextureAsset(texture2D);
+                                }
+                            }
+                            bool b = AssetDatabase.GetAssetPath(mesh.sharedMesh).StartsWith("Assets");
+                            if (b)
+                            {
+                                StaticMeshEntity staticMeshEntity = new StaticMeshEntity();
+                                staticMeshEntity.Name = mesh.gameObject.name;
+                                staticMeshEntity.Position = mesh.transform.position;
+                                staticMeshEntity.Scale = mesh.transform.lossyScale;
+                            
+                                Quaternion outsideRotation = mesh.transform.rotation;
+                                // Quaternion outsideRotation = Quaternion.Euler(new Vector3(euler.y, euler.x, euler.z));
+                                staticMeshEntity.Rotation = outsideRotation;
+                                var fbxPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
+                                string directory = Path.Combine(Path.GetDirectoryName(fbxPath));
+                                string meshPath = Path.Combine(directory, Path.GetFileName((mesh.sharedMesh.name)+".dxMesh"));
+                                staticMeshEntity.MeshPath = meshPath;
+                            
+                                staticMeshes.Add(staticMeshEntity);
+                                ExportMeshAsset(AssetDatabase.GetAssetPath(mesh.sharedMesh));
                             }
                         }
-                        bool b = AssetDatabase.GetAssetPath(mesh.sharedMesh).StartsWith("Assets");
-                        if (b)
-                        {
-                            StaticMeshEntity staticMeshEntity = new StaticMeshEntity();
-                            staticMeshEntity.Name = mesh.gameObject.name;
-                            staticMeshEntity.Position = mesh.transform.position;
-                            staticMeshEntity.Scale = mesh.transform.lossyScale;
-                            
-                            Quaternion outsideRotation = mesh.transform.rotation;
-                            // Quaternion outsideRotation = Quaternion.Euler(new Vector3(euler.y, euler.x, euler.z));
-                            staticMeshEntity.Rotation = outsideRotation;
-                            var fbxPath = AssetDatabase.GetAssetPath(mesh.sharedMesh);
-                            string directory = Path.Combine(Path.GetDirectoryName(fbxPath));
-                            string meshPath = Path.Combine(directory, Path.GetFileName((mesh.sharedMesh.name)+".dxMesh"));
-                            staticMeshEntity.MeshPath = meshPath;
-                            
-                            staticMeshes.Add(staticMeshEntity);
-                            ExportMeshAsset(AssetDatabase.GetAssetPath(mesh.sharedMesh));
-                        }
-
                     }
 
                 }

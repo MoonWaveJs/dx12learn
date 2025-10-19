@@ -1,11 +1,11 @@
 [
   {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Hair5.dxMesh",
-    "Name": "Hair5",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
       "x": 100.0,
@@ -20,12 +20,12 @@
     }
   },
   {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Hair4.dxMesh",
-    "Name": "Hair4",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
       "x": 100.0,
@@ -40,72 +40,12 @@
     }
   },
   {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Hair3.dxMesh",
-    "Name": "Hair3",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
-    },
-    "Scale": {
-      "x": 100.0,
-      "y": 100.000015,
-      "z": 100.000015
-    },
-    "Rotation": {
-      "x": 1.59221459E-14,
-      "y": 1.0,
-      "z": -8.14603354E-08,
-      "w": 1.94707184E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Hair2.dxMesh",
-    "Name": "Hair2",
-    "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
-    },
-    "Scale": {
-      "x": 100.0,
-      "y": 100.000015,
-      "z": 100.000015
-    },
-    "Rotation": {
-      "x": 1.59221459E-14,
-      "y": 1.0,
-      "z": -8.14603354E-08,
-      "w": 1.94707184E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Hair1.dxMesh",
-    "Name": "Hair1",
-    "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
-    },
-    "Scale": {
-      "x": 100.0,
-      "y": 100.000015,
-      "z": 100.000015
-    },
-    "Rotation": {
-      "x": 4.316693E-15,
-      "y": 1.0,
-      "z": -2.18556941E-08,
-      "w": 1.94707184E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Base_underwear.dxMesh",
-    "Name": "Base_underwear",
-    "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
       "x": 100.0,
@@ -120,12 +60,12 @@
     }
   },
   {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Base_Body.dxMesh",
-    "Name": "Base_Body",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
       "x": 100.0,
@@ -140,12 +80,12 @@
     }
   },
   {
-    "MeshPath": "Assets\\AnimeGirls\\BaseCharacter\\BaseCharacter\\Sourcefiles\\Base_bikini.dxMesh",
-    "Name": "Base_bikini",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -1.64,
-      "y": 0.0,
-      "z": -5.02
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
       "x": 100.0,
@@ -160,1257 +100,117 @@
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BedPillow.dxMesh",
-    "Name": "BedPillow (2)",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -3.951001,
-      "y": 0.505611539,
-      "z": -5.625
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 1.00000048,
+      "x": 100.0,
+      "y": 100.0,
+      "z": 100.0
+    },
+    "Rotation": {
+      "x": 4.316693E-15,
       "y": 1.0,
-      "z": 1.00000048
-    },
-    "Rotation": {
-      "x": -2.079934E-08,
-      "y": -0.9990483,
-      "z": -0.04361938,
-      "w": 4.763833E-07
+      "z": -2.18556941E-08,
+      "w": 1.94707184E-07
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\TableRectangleMedium.dxMesh",
-    "Name": "TableRectangleMedium",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": 0.476,
-      "y": 0.009490073,
-      "z": -3.905
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
+      "x": 100.0,
+      "y": 100.0,
+      "z": 100.0
     },
     "Rotation": {
-      "x": 0.0,
-      "y": 4.768371E-07,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\CurtainPole4m001.dxMesh",
-    "Name": "CurtainPole4m001",
-    "Position": {
-      "x": -4.00000238,
-      "y": 0.0,
-      "z": -0.08404577
-    },
-    "Scale": {
-      "x": 1.0,
+      "x": 4.316693E-15,
       "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.5000001,
-      "y": 0.499999851,
-      "z": 0.499999881,
-      "w": 0.5000001
+      "z": -2.18556941E-08,
+      "w": 1.94707184E-07
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\CurtainBay4m.dxMesh",
-    "Name": "CurtainBay4m",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -4.00000238,
-      "y": 0.0,
-      "z": -0.08404577
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 1.0,
+      "x": 100.0,
+      "y": 100.0,
+      "z": 100.0
+    },
+    "Rotation": {
+      "x": 4.316693E-15,
       "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
+      "z": -2.18556941E-08,
+      "w": 1.94707184E-07
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WindowBayGlass4m.dxMesh",
-    "Name": "WindowBayGlass4m",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -4.0,
-      "y": 0.0,
-      "z": 0.0
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
+      "x": 100.0,
+      "y": 100.0,
+      "z": 100.0
     },
     "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WindowBayFrame4m.dxMesh",
-    "Name": "WindowBayFrame4m",
-    "Position": {
-      "x": -4.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallWindowBay4mSkirting.dxMesh",
-    "Name": "WallWindowBay4mSkirting",
-    "Position": {
-      "x": -4.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallWindowBay4mCeling.dxMesh",
-    "Name": "WallWindowBay4mCeling",
-    "Position": {
-      "x": -4.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallWindowBay4m.dxMesh",
-    "Name": "WallWindowBay4m",
-    "Position": {
-      "x": -4.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\FloorBayWindow.dxMesh",
-    "Name": "FloorBayWindow",
-    "Position": {
-      "x": -3.5,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
+      "x": 4.316693E-15,
       "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
+      "z": -2.18556941E-08,
+      "w": 1.94707184E-07
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantSnakeLarge.dxMesh",
-    "Name": "PlantSnakeLarge",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1_Body.dxMesh",
+    "Name": "Casual1_Body",
     "Position": {
-      "x": -2.98258257,
-      "y": 0.102878839,
-      "z": -0.000895719044
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 0.2578515,
-      "y": 0.257851452,
-      "z": 0.2578515
+      "x": 100.0,
+      "y": 100.0,
+      "z": 100.0
     },
     "Rotation": {
-      "x": 0.0,
-      "y": 0.5568589,
-      "z": 0.0,
-      "w": 0.8306072
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantPotMedium.dxMesh",
-    "Name": "PlantPotMedium",
-    "Position": {
-      "x": -2.987,
-      "y": -0.03,
-      "z": 0.014
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\DoorHandle001.dxMesh",
-    "Name": "DoorHandle001",
-    "Position": {
-      "x": -7.01878738,
-      "y": 1.05801,
-      "z": -3.67607355
-    },
-    "Scale": {
-      "x": -1.00000012,
-      "y": -1.0,
-      "z": -0.99999994
-    },
-    "Rotation": {
-      "x": -0.5000002,
-      "y": 0.5000001,
-      "z": 0.49999997,
-      "w": 0.499999732
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\DoorHandle.dxMesh",
-    "Name": "DoorHandle",
-    "Position": {
-      "x": -6.9405756,
-      "y": 1.05801,
-      "z": -3.67607355
-    },
-    "Scale": {
-      "x": -1.00000012,
-      "y": -1.0,
-      "z": -0.99999994
-    },
-    "Rotation": {
-      "x": -0.5000002,
-      "y": 0.5000001,
-      "z": 0.49999997,
-      "w": 0.499999732
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Door.dxMesh",
-    "Name": "Door",
-    "Position": {
-      "x": -6.999997,
-      "y": 2.38418579E-07,
-      "z": -4.450001
-    },
-    "Scale": {
-      "x": 1.00000024,
+      "x": 4.316693E-15,
       "y": 1.0,
-      "z": 1.00000024
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": -0.707106948,
-      "z": 0.0,
-      "w": 0.7071067
+      "z": -2.18556941E-08,
+      "w": 1.94707184E-07
     }
   },
   {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallDoor2mSkirting.dxMesh",
-    "Name": "WallDoor2mSkirting",
+    "MeshPath": "Assets\\AnimeGirls\\Casual1\\SourceFiles\\Mesh\\Casual1.dxMesh",
+    "Name": "Casual1",
     "Position": {
-      "x": -6.99999666,
-      "y": 2.38418579E-07,
-      "z": -5.000001
+      "x": 0.119364753,
+      "y": -1.1920929E-07,
+      "z": -0.957300544
     },
     "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999997,
-      "y": -0.50000006,
-      "z": -0.5000002,
-      "w": 0.4999999
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallDoor2m.dxMesh",
-    "Name": "WallDoor2m",
-    "Position": {
-      "x": -6.99999666,
-      "y": 2.38418579E-07,
-      "z": -5.000001
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999997,
-      "y": -0.50000006,
-      "z": -0.5000002,
-      "w": 0.4999999
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Mug.dxMesh",
-    "Name": "Mug",
-    "Position": {
-      "x": -1.98143244,
-      "y": 0.36,
-      "z": -0.760668039
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantSnakeLarge.dxMesh",
-    "Name": "PlantSnakeLarge",
-    "Position": {
-      "x": -1.964277,
-      "y": 0.13287884,
-      "z": 0.2900363
-    },
-    "Scale": {
-      "x": 0.2578515,
-      "y": 0.257851452,
-      "z": 0.2578515
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.5568589,
-      "z": 0.0,
-      "w": 0.8306072
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantPotMedium.dxMesh",
-    "Name": "PlantPotMedium (1)",
-    "Position": {
-      "x": -1.96869445,
-      "y": 0.0,
-      "z": 0.304932
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Floor\\Floor2m.dxMesh",
-    "Name": "Floor2m",
-    "Position": {
-      "x": -2.99503231,
-      "y": 2.38418579E-07,
-      "z": -9.536743E-07
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Wall3mSkirting.dxMesh",
-    "Name": "Wall3mSkirting",
-    "Position": {
-      "x": 0.9999981,
-      "y": 0.0,
-      "z": -3.0
-    },
-    "Scale": {
-      "x": 1.00000012,
-      "y": 1.0,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.50000006,
-      "y": 0.49999997,
-      "z": 0.50000006,
-      "w": 0.49999997
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Wall3m.dxMesh",
-    "Name": "Wall3m",
-    "Position": {
-      "x": 0.9999981,
-      "y": 0.0,
-      "z": -3.0
-    },
-    "Scale": {
-      "x": 1.00000012,
-      "y": 1.0,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.50000006,
-      "y": 0.49999997,
-      "z": 0.50000006,
-      "w": 0.49999997
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\DoorHandle001.dxMesh",
-    "Name": "DoorHandle001",
-    "Position": {
-      "x": 1.01878881,
-      "y": 1.05800974,
-      "z": -2.3239274
-    },
-    "Scale": {
-      "x": -1.0,
-      "y": -0.99999994,
-      "z": -0.99999994
-    },
-    "Rotation": {
-      "x": 0.5000003,
-      "y": 0.499999434,
-      "z": 0.499999881,
-      "w": -0.5000004
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\DoorHandle.dxMesh",
-    "Name": "DoorHandle",
-    "Position": {
-      "x": 0.94057703,
-      "y": 1.05800974,
-      "z": -2.3239274
-    },
-    "Scale": {
-      "x": -1.0,
-      "y": -0.99999994,
-      "z": -0.99999994
-    },
-    "Rotation": {
-      "x": 0.5000003,
-      "y": 0.499999434,
-      "z": 0.499999881,
-      "w": -0.5000004
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Door.dxMesh",
-    "Name": "Door",
-    "Position": {
-      "x": 0.9999995,
-      "y": 0.0,
-      "z": -1.54999983
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.7071071,
-      "z": 0.0,
-      "w": 0.7071065
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallDoor2mSkirting.dxMesh",
-    "Name": "WallDoor2mSkirting",
-    "Position": {
-      "x": 1.0,
-      "y": 0.0,
-      "z": -0.9999998
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.99999994,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.499999821,
-      "y": 0.5000002,
-      "z": 0.5000003,
-      "w": 0.499999732
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallDoor2m.dxMesh",
-    "Name": "WallDoor2m",
-    "Position": {
-      "x": 1.0,
-      "y": 0.0,
-      "z": -0.9999998
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.99999994,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.499999821,
-      "y": 0.5000002,
-      "z": 0.5000003,
-      "w": 0.499999732
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Floor\\Floor4m.dxMesh",
-    "Name": "Floor4m (1)",
-    "Position": {
-      "x": -2.99503231,
-      "y": 2.38418579E-07,
-      "z": -2.000001
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Floor\\Floor4m.dxMesh",
-    "Name": "Floor4m",
-    "Position": {
-      "x": -6.99503231,
-      "y": 2.38418579E-07,
-      "z": -2.000001
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\ShelvesMediumA.dxMesh",
-    "Name": "ShelvesMediumA",
-    "Position": {
-      "x": -6.77,
-      "y": 0.00613948237,
-      "z": -5.44189835
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\LightBulb.dxMesh",
-    "Name": "LightBulb",
-    "Position": {
-      "x": 0.605,
-      "y": 1.198,
-      "z": -3.427497
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 1.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": -2.82129974E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\LampShadewire.dxMesh",
-    "Name": "LampShadewire",
-    "Position": {
-      "x": 0.6050001,
-      "y": 1.01094806,
-      "z": -3.427497
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714931,
-      "z": 0.340714931
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\LampShadeSmall.dxMesh",
-    "Name": "LampShadeSmall",
-    "Position": {
-      "x": 0.60499984,
-      "y": 1.15931249,
-      "z": -3.427497
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714931,
-      "z": 0.340714931
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\LampRoundSmall.dxMesh",
-    "Name": "LampRoundSmall",
-    "Position": {
-      "x": 0.605,
-      "y": 0.83,
-      "z": -3.427497
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714931,
-      "z": 0.340714931
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BookSmall.dxMesh",
-    "Name": "BookSmall",
-    "Position": {
-      "x": 0.765,
-      "y": 1.0148381,
-      "z": -4.478
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714961,
-      "z": 0.384043962
-    },
-    "Rotation": {
-      "x": -2.13086587E-05,
-      "y": 4.76837158E-07,
-      "z": -1.0,
-      "w": -1.09139364E-11
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BookMedium.dxMesh",
-    "Name": "BookMedium 1",
-    "Position": {
-      "x": 0.7492246,
-      "y": 0.974145353,
-      "z": -4.47799969
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714961,
-      "z": 0.384043962
-    },
-    "Rotation": {
-      "x": -2.13086587E-05,
-      "y": 4.76837158E-07,
-      "z": -1.0,
-      "w": -1.09139364E-11
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BookMedium.dxMesh",
-    "Name": "BookMedium",
-    "Position": {
-      "x": 0.765,
-      "y": 1.053171,
-      "z": -4.478
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714961,
-      "z": 0.384043962
-    },
-    "Rotation": {
-      "x": -2.13086587E-05,
-      "y": 4.76837158E-07,
-      "z": -1.0,
-      "w": -1.09139364E-11
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BookLarge.dxMesh",
-    "Name": "BookLarge",
-    "Position": {
-      "x": 0.765,
-      "y": 0.9261288,
-      "z": -4.478
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714961,
-      "z": 0.384043962
-    },
-    "Rotation": {
-      "x": -2.13086587E-05,
-      "y": 4.76837158E-07,
-      "z": -1.0,
-      "w": -1.09139364E-11
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Wall1mSkirting.dxMesh",
-    "Name": "Wall1mSkirting",
-    "Position": {
-      "x": -6.99999666,
-      "y": 2.38418579E-07,
-      "z": -6.000001
-    },
-    "Scale": {
-      "x": 1.00000012,
-      "y": 1.0,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.5000001,
-      "y": -0.49999994,
-      "z": -0.5,
-      "w": 0.5
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\Wall1m.dxMesh",
-    "Name": "Wall1m",
-    "Position": {
-      "x": -6.99999666,
-      "y": 2.38418579E-07,
-      "z": -6.000001
-    },
-    "Scale": {
-      "x": 1.00000012,
-      "y": 1.0,
-      "z": 0.99999994
-    },
-    "Rotation": {
-      "x": -0.5000001,
-      "y": -0.49999994,
-      "z": -0.5,
-      "w": 0.5
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\ChairDinningB.dxMesh",
-    "Name": "ChairDinningB",
-    "Position": {
-      "x": -0.402992249,
-      "y": 0.009490073,
-      "z": -3.91948342
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 1.0,
-      "z": 0.0,
-      "w": 4.768371E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\VaseSmall.dxMesh",
-    "Name": "VaseSmall",
-    "Position": {
-      "x": 0.747,
-      "y": 0.802,
-      "z": -3.994
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340714931,
-      "z": 0.340714931
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInnerSkirting.dxMesh",
-    "Name": "WallCornerInnerSkirting",
-    "Position": {
-      "x": -6.99999762,
-      "y": 2.38418579E-07,
-      "z": -3.000001
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999994,
-      "y": -0.5000001,
-      "z": -0.5000002,
-      "w": 0.499999851
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInner.dxMesh",
-    "Name": "WallCornerInner",
-    "Position": {
-      "x": -6.99999762,
-      "y": 2.38418579E-07,
-      "z": -3.000001
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999994,
-      "y": -0.5000001,
-      "z": -0.5000002,
-      "w": 0.499999851
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInnerSkirting.dxMesh",
-    "Name": "WallCornerInnerSkirting",
-    "Position": {
-      "x": -4.999999,
-      "y": 0.0,
-      "z": -1.0000006
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999994,
-      "y": -0.5000001,
-      "z": -0.5000002,
-      "w": 0.499999851
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInner.dxMesh",
-    "Name": "WallCornerInner",
-    "Position": {
-      "x": -4.999999,
-      "y": 0.0,
-      "z": -1.0000006
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -0.49999994,
-      "y": -0.5000001,
-      "z": -0.5000002,
-      "w": 0.499999851
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerOuterSkirting.dxMesh",
-    "Name": "WallCornerOuterSkirting",
-    "Position": {
-      "x": -5.999999,
-      "y": 0.0,
-      "z": -2.00000048
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.5000002,
-      "y": 0.499999851,
-      "z": 0.5,
-      "w": -0.5
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerOuter.dxMesh",
-    "Name": "WallCornerOuter",
-    "Position": {
-      "x": -5.999999,
-      "y": 0.0,
-      "z": -2.00000048
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.50000006,
-      "y": 0.49999997,
-      "z": 0.50000006,
-      "w": -0.49999997
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantSnakeLarge.dxMesh",
-    "Name": "PlantSnakeLarge",
-    "Position": {
-      "x": -1.05761981,
-      "y": 0.29,
-      "z": 0.0971729755
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\PlantPotRoundMedium.dxMesh",
-    "Name": "PlantPotRoundMedium",
-    "Position": {
-      "x": -1.05761981,
-      "y": 0.0,
-      "z": 0.0971729755
-    },
-    "Scale": {
-      "x": 0.340715,
-      "y": 0.340715,
-      "z": 0.340715
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\SofaCusion.dxMesh",
-    "Name": "SofaCusion (1)",
-    "Position": {
-      "x": -2.66699982,
-      "y": 0.689924,
-      "z": -2.28106737
-    },
-    "Scale": {
-      "x": 1.00000048,
-      "y": 1.00000048,
-      "z": 1.00000024
-    },
-    "Rotation": {
-      "x": 0.040920902,
-      "y": 0.2718324,
-      "z": 0.710535765,
-      "w": 0.6477435
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\SofaCusion.dxMesh",
-    "Name": "SofaCusion",
-    "Position": {
-      "x": -1.08342791,
-      "y": 0.680924,
-      "z": -2.37706566
-    },
-    "Scale": {
-      "x": 1.00000048,
-      "y": 1.00000036,
-      "z": 1.00000036
-    },
-    "Rotation": {
-      "x": -0.109510414,
-      "y": 0.003320089,
-      "z": 0.6842508,
-      "w": 0.7209698
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\SofaDouble.dxMesh",
-    "Name": "SofaDouble",
-    "Position": {
-      "x": -1.86,
-      "y": -0.00307607651,
-      "z": -2.19
-    },
-    "Scale": {
-      "x": 2.139742,
-      "y": 2.139742,
-      "z": 2.139742
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 1.0,
-      "z": 0.0,
-      "w": 5.8114523E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Floor\\Floor2m.dxMesh",
-    "Name": "Floor2m (3)",
-    "Position": {
-      "x": -0.9950322,
-      "y": 2.38418579E-07,
-      "z": -9.536743E-07
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Floor\\Floor2m.dxMesh",
-    "Name": "Floor2m (1)",
-    "Position": {
-      "x": -4.99503231,
-      "y": 2.38418579E-07,
-      "z": -9.536743E-07
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Mug.dxMesh",
-    "Name": "Mug (1)",
-    "Position": {
-      "x": 0.169,
-      "y": 0.815,
-      "z": -3.75273824
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 1.0
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BedPillow.dxMesh",
-    "Name": "BedPillow (1)",
-    "Position": {
-      "x": -3.951001,
-      "y": 0.505611539,
-      "z": -5.625
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.00000024
-    },
-    "Rotation": {
-      "x": -2.079934E-08,
-      "y": -0.9990483,
-      "z": -0.04361938,
-      "w": 4.763833E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BedPillow.dxMesh",
-    "Name": "BedPillow",
-    "Position": {
-      "x": -3.250001,
-      "y": 0.505611539,
-      "z": -5.62500048
-    },
-    "Scale": {
-      "x": 1.00000024,
-      "y": 1.0,
-      "z": 1.00000024
-    },
-    "Rotation": {
-      "x": -2.079934E-08,
-      "y": -0.9990483,
-      "z": -0.04361938,
-      "w": 4.763833E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\BedDouble.dxMesh",
-    "Name": "BedDouble",
-    "Position": {
-      "x": -3.65,
-      "y": -0.00238850713,
-      "z": -4.83
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
-    },
-    "Rotation": {
-      "x": -3.06161779E-17,
-      "y": -1.0,
-      "z": -9.098986E-24,
-      "w": 4.768371E-07
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\TableRectangleShort.dxMesh",
-    "Name": "TableRectangleShort",
-    "Position": {
-      "x": -1.74112546,
-      "y": 0.009490068,
-      "z": -0.721356153
-    },
-    "Scale": {
-      "x": 0.340715051,
-      "y": 0.340715,
-      "z": 0.340715051
-    },
-    "Rotation": {
-      "x": 0.0,
-      "y": 0.7071068,
-      "z": 0.0,
-      "w": 0.7071068
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInnerSkirting.dxMesh",
-    "Name": "WallCornerInnerSkirting",
-    "Position": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
-    },
-    "Rotation": {
-      "x": -0.7071068,
-      "y": 0.0,
-      "z": 0.0,
-      "w": 0.7071067
-    }
-  },
-  {
-    "MeshPath": "Assets\\UnityTechnologies\\Basic Asset Pack Interior\\Models\\Walls\\WallCornerInner.dxMesh",
-    "Name": "WallCornerInner",
-    "Position": {
-      "x": 0.0,
-      "y": 0.0,
-      "z": 0.0
-    },
-    "Scale": {
-      "x": 1.0,
-      "y": 0.9999999,
-      "z": 0.9999999
+      "x": 100.0,
+      "y": 99.9999847,
+      "z": 99.9999847
     },
     "Rotation": {
       "x": -0.7071068,
